@@ -42,6 +42,12 @@ Copie la API key y haga clic en ``Done``. Tenga en cuenta que después de cerrar
 
 Almacene su API key en un documento ``.env``, por ejemplo ``openAI.env``. Esto lo puede hacer en un editor de texto como Sublime o VScode 
 
+La estructura del archivo .env debe ser la siguiente:
+
+````shell
+openAI_api_key = skXXXXXXXXXXX
+````
+
    <div align="center">
   <a>
     <img src="imgs/key6.png">

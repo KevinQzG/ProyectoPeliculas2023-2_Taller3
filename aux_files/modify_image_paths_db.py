@@ -2,12 +2,6 @@ from django.core.management.base import BaseCommand
 from movie.models import Movie
 import json
 
-
-from dotenv import load_dotenv, find_dotenv
-
-_ = load_dotenv('../openAI.env')
-openai.api_key  = os.environ['openAI_api_key']
-
 class Command(BaseCommand):
     help = 'Modify path of images'
 
