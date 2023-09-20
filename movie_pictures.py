@@ -20,14 +20,15 @@ with open('movie_descriptions.json', 'r') as file:
 idx_movie = np.random.randint(len(movies)-1)
 print(movies[idx_movie])
 
-#Se hace la conexión con la API de generación de imágenes. El prompt en este caso es:
-#Alguna escena de la película + "nombre de la película"
+# Se hace la conexión con la API de generación de imágenes. El prompt en este caso es:
+# "Genera una escena original de la película [nombre de la película]"
 response = openai.Image.create(
-  prompt=f"Alguna escena de la película {movies[np.random.randint(idx_movie)]['title']}",
+  prompt=f"Genera una escena original de la película {movies[np.random.randint(idx_movie)]['title']}",
   n=1,
-  size="256x256"
+  size="512x512"
 )
 image_url = response['data'][0]['url']
+
 
 # La API devuelve la url de la imagen, por lo que debemos generar una función auxiliar que
 # descargue la imagen.
