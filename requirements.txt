@@ -4,3 +4,6 @@ numpy
 scikit-learn
 Django
 Pillow
+pandas
+plotly
+matplotlib
